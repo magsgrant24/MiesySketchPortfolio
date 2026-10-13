@@ -1,0 +1,92 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Paintings — Miesy Sketch</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="category.css"></head><body class="category-page"><header class="site-header">
+<a class="wordmark" href="index.html" aria-label="Miesysketch home"><img src="miesy-wordmark.png" alt="Miesy Sketch" /></a>
+<nav aria-label="Primary navigation">
+<a href="about.html">About Me</a><a href="paintings.html">Paintings</a><a href="drawings.html">Drawings</a><a href="film-works.html">Film Works</a><a href="tattoo-portfolio.html">Tattoo Portfolio</a><a href="notes.html">Images</a><a href="contact.html">Contact Me</a>
+</nav>
+</header><header class="category-header"><h1 class="image-title"><img src="paintings-title.png" alt="Paintings" /></h1></header><nav class="collection-index" aria-label="Painting collections"><a href="#blue-nudes-title">Blue Nudes</a><a class="collection-title" href="#recent-works">Recent Works</a></nav><main class="paintings-content"><section class="series-flow" aria-labelledby="blue-nudes-title"><div class="series-copy"><div class="series-rule" aria-hidden="true"></div><h2 id="blue-nudes-title" class="image-series-title"><img src="blue-nudes-title.png" alt="Blue Nudes" /></h2></div><figure class="series-work"><p class="artwork-details"><strong>Staring contest</strong>, Acrylic paint, masking tape, magazine and newspaper collage materials, on 2 x A4 paper, 42cm x 29.7cm</p><button class="artwork-trigger" type="button" aria-label="Open Blue Nudes I for a closer view"><img class="blue-nudes-artwork" src="blue-nudes-01.png" alt="Blue Nudes I, a blue mixed-media painting with figures, eyes, and collage elements." /></button><p class="artwork-description">My work <i>Staring Contest</i> documents the ideas that continuously circulate in my mind, the concept of a woman’s body being under constant surveillance from the world, not only to inspect her physicality but also to ensure she is “well-behaved.” Through looser brushstrokes contrasted with harsh, clean lines left by masking tape, I reveal the duality of women: how our femininity is gentle, beautiful, and tonal, yet surrounded by an inner strength and sturdiness, much like the white lines that frame the figure’s body. On the right, the eyes are trapped within cage-like lines, reflecting how society has confined women through imposed expectations, training our minds — and our gaze, to follow certain rules. Collaged within the work are images of Baroque women from eras when they could not train as artists but existed merely as subjects. To the right, eyes cut from newspapers represent various political and public figures such as Alexandria Ocasio-Cortez and Hillary Clinton. <i>Staring Contest</i> serves as my commentary on the scrutiny women continue to face in the modern day and have endured throughout history.</p><p class="detail-image-caption"><strong>Just Don't Take my sparkle</strong>, Ink, Acrylic Paint, Gouache, Water-soluble crayons on 150gsm watercolour paper, 17cm x 60cm</p><img class="artwork-description-image" src="staring-contest-detail.png" alt="Blue-toned painting of two intertwined figures with expressive brushwork." /><img class="artwork-description-image artwork-series-image" src="staring-contest-series.png" alt="Three blue-toned paintings from the Staring Contest series." /><p class="detail-image-caption"><strong>Layers of My Body, Amongst Layers of Natural Life</strong>, Gouache, Water Soluble crayon, collage, scanning, white pens, on 150 gsm watercolour paper, A1 size (59cm x 81cm)</p><img class="artwork-description-image artwork-series-image" src="staring-contest-additional.png" alt="Five long blue abstract artworks arranged vertically on a wooden deck." /><p class="artwork-description">This piece, "Layers Of My Body Amongst The Layers Of Natural Life," conceptually intertwines the human form with the organic world, employing overlaying, erasure, and collage techniques to explore the porous boundaries between body and nature. The act of overlaying signifies the intersection and coexistence of internal and external realms—human anatomy merging with natural textures and forms, creating a visual palimpsest that suggests an interdependent existence rather than discrete entities. Erasure disrupts clarity and permanence, evoking the transient nature of life and the fragility of human presence within the broader ecosystem, while also implying spaces of absence and memory. The collage technique, enhanced through brush and pen, introduces fragmented yet interconnected narratives, layering tactile and visual elements that echo ecological complexity and bodily multiplicity. The nuanced layering invites reflection on the inherent biomorphism in human and natural forms—highlighting the organic rhythms, contours, and rhythms that bind us to earth’s phenomena. The multifaceted process symbolises the continuous transformation and regeneration intrinsic to both human and ecological life cycles. This work speaks to the fluidity of identity, embodiment, and environment, addressing themes of coexistence, vulnerability, and resilience. By visually negotiating these layered interactions with sensitive mark-making, the piece transcends literal representation to evoke an immersive dialogue between flesh and nature’s fabric, positioning the body as both subject and ecosystem within the natural world.</p><div class="series-rule" aria-hidden="true"></div><h2 class="recent-works-heading" id="recent-works">RECENT WORKS</h2><p class="detail-image-caption"><strong>BODYBRAINBODY</strong>, MIXED MEDIA, (1270x720)</p><img class="artwork-description-image recent-works-artwork" src="recent-works-yellow.png" alt="Layered yellow and white abstract mixed-media artwork with organic shapes and collage-like details." /><p class="detail-image-caption"><strong>I CAN BE YOUR FAVOURITE COLOUR</strong>, ACRYLIC ON CANVAS BOARD (A2)</p><img class="artwork-description-image recent-works-artwork" src="recent-works-bodybrainbody-detail.png" alt="Abstract mixed-media painting of overlapping body forms and organic shapes in yellow, green, red, and blue." /></figure></section></main><div class="artwork-lightbox" id="artwork-lightbox" hidden role="dialog" aria-modal="true" aria-labelledby="lightbox-title"><div class="lightbox-panel"><div class="lightbox-toolbar"><p id="lightbox-title">Staring Contest</p><div><button type="button" data-zoom-out aria-label="Zoom out">−</button><button type="button" data-zoom-reset>Reset</button><button type="button" data-zoom-in aria-label="Zoom in">+</button><button type="button" data-lightbox-close aria-label="Close artwork viewer">×</button></div></div><div class="lightbox-viewport"><img id="lightbox-image" src="blue-nudes-01.png" alt="Blue Nudes I, a blue mixed-media painting with figures, eyes, and collage elements." /></div></div></div><footer class="site-footer category-footer"><a href="index.html">Back to archive ↑</a></footer><script>
+const artworkTrigger = document.querySelector(".artwork-trigger");
+const lightbox = document.querySelector("#artwork-lightbox");
+const lightboxImage = document.querySelector("#lightbox-image");
+const lightboxViewport = document.querySelector(".lightbox-viewport");
+let zoom = 1;
+let panX = 0;
+let panY = 0;
+let isDragging = false;
+let dragStartX = 0;
+let dragStartY = 0;
+let startPanX = 0;
+let startPanY = 0;
+function updateZoom() {
+  lightboxImage.style.transform = `translate(${panX}px, ${panY}px) scale(${zoom})`;
+  lightboxImage.classList.toggle("is-zoomed", zoom > 1);
+}
+function resetView() {
+  zoom = 1;
+  panX = 0;
+  panY = 0;
+  updateZoom();
+}
+function closeLightbox() {
+  lightbox.hidden = true;
+  document.body.classList.remove("lightbox-open");
+  resetView();
+  artworkTrigger.focus();
+}
+artworkTrigger.addEventListener("click", () => {
+  lightbox.hidden = false;
+  document.body.classList.add("lightbox-open");
+  updateZoom();
+  lightbox.querySelector("[data-lightbox-close]").focus();
+});
+lightbox.querySelector("[data-zoom-in]").addEventListener("click", () => {
+  zoom = Math.min(zoom + .25, 4);
+  updateZoom();
+});
+lightbox.querySelector("[data-zoom-out]").addEventListener("click", () => {
+  zoom = Math.max(zoom - .25, 1);
+  updateZoom();
+});
+lightbox.querySelector("[data-zoom-reset]").addEventListener("click", () => {
+  resetView();
+});
+lightboxImage.addEventListener("pointerdown", (event) => {
+  if (zoom <= 1) return;
+  isDragging = true;
+  dragStartX = event.clientX;
+  dragStartY = event.clientY;
+  startPanX = panX;
+  startPanY = panY;
+  lightboxImage.setPointerCapture(event.pointerId);
+  lightboxImage.classList.add("is-dragging");
+});
+lightboxImage.addEventListener("pointermove", (event) => {
+  if (!isDragging) return;
+  panX = startPanX + event.clientX - dragStartX;
+  panY = startPanY + event.clientY - dragStartY;
+  updateZoom();
+});
+function stopDragging(event) {
+  if (!isDragging) return;
+  isDragging = false;
+  lightboxImage.releasePointerCapture?.(event.pointerId);
+  lightboxImage.classList.remove("is-dragging");
+}
+lightboxImage.addEventListener("pointerup", stopDragging);
+lightboxImage.addEventListener("pointercancel", stopDragging);
+lightboxViewport.addEventListener("wheel", (event) => {
+  event.preventDefault();
+  zoom = Math.min(Math.max(zoom + (event.deltaY < 0 ? .25 : -.25), 1), 4);
+  if (zoom === 1) {
+    panX = 0;
+    panY = 0;
+  }
+  updateZoom();
+}, { passive: false });
+lightbox.querySelector("[data-lightbox-close]").addEventListener("click", closeLightbox);
+lightbox.addEventListener("click", (event) => {
+  if (event.target === lightbox) closeLightbox();
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !lightbox.hidden) closeLightbox();
+});
+</script></body></html>
