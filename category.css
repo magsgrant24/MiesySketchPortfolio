@@ -19,6 +19,117 @@
   max-width: 100%;
   width: 100%;
 }
+.drawing-tile h2 {
+  font: 16px/1.2 Helvetica, Arial, sans-serif;
+  margin: 14px 0 6px;
+  text-transform: uppercase;
+}
+.drawing-tile img { cursor: zoom-in; }
+.drawing-tile p {
+  font: 11px/1.4 Helvetica, Arial, sans-serif;
+  margin: 0;
+  text-transform: uppercase;
+}
+.drawings-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  max-width: 1180px;
+  margin: 20px auto 120px;
+  padding: 0 28px;
+}
+.drawings-gallery .drawing-tile {
+  width: 100%;
+  text-align: left;
+}
+.drawings-gallery .drawing-tile img {
+  width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  object-position: left center;
+  background: transparent;
+}
+.installation-page { text-align: left; }
+.installation-page .installation-header { padding-bottom: 32px; }
+.installation-kicker {
+  font: 11px var(--mono);
+  margin: 45px auto 16px;
+  max-width: 1180px;
+  text-transform: uppercase;
+}
+.installation-header h1 {
+  font: normal clamp(42px, 8vw, 108px)/.95 Helvetica, Arial, sans-serif;
+  letter-spacing: -.07em;
+  margin: 0 auto;
+  max-width: 1180px;
+  text-transform: uppercase;
+}
+.installation-byline {
+  font: 14px Helvetica, Arial, sans-serif;
+  margin: 20px auto 0;
+  max-width: 1180px;
+  text-transform: uppercase;
+}
+.installation-content {
+  margin: 0 auto 100px;
+  max-width: 1180px;
+  padding: 0 28px;
+}
+.installation-overview {
+  display: grid;
+  gap: 20px 40px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 20px 0;
+}
+.installation-overview p,
+.installation-statement p {
+  font: 16px/1.55 Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+.installation-overview strong {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.installation-video {
+  aspect-ratio: 16 / 9;
+  background: #111;
+  margin: 48px auto 72px;
+  max-width: 960px;
+}
+.installation-video iframe {
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
+.installation-gallery {
+  display: grid;
+  gap: 48px 28px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.installation-gallery figure { margin: 0; }
+.installation-gallery img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.installation-gallery figcaption {
+  font: 13px/1.5 Helvetica, Arial, sans-serif;
+  margin-top: 12px;
+}
+.installation-statement {
+  border-top: 1px solid var(--ink);
+  margin: 80px auto 0;
+  max-width: 760px;
+  padding-top: 22px;
+}
+.installation-statement h2 {
+  font: 11px var(--mono);
+  margin: 0 0 24px;
+  text-transform: uppercase;
+}
+.installation-statement p + p { margin-top: 18px; }
 .about-portrait {
   display: block;
   height: auto;
@@ -227,10 +338,16 @@
   color: #fff;
   display: flex;
   font: 11px var(--mono);
+  gap: 12px;
   justify-content: space-between;
   text-transform: uppercase;
 }
 .lightbox-toolbar p { margin: 0; }
+.lightbox-toolbar > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
 .lightbox-toolbar button {
   background: transparent;
   border: 1px solid #fff;
@@ -455,6 +572,15 @@ body.lightbox-open { overflow: hidden; }
   .category-header h1 { font-size: 22vw; margin: 75px auto 45px; }
   .images-page-title { margin: 75px auto 45px; }
   .images-gallery { gap: 14px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 12px; padding: 0 18px; }
+  .drawings-gallery { gap: 48px; display: flex; flex-direction: column; }
+  .drawings-gallery .drawing-tile img { max-height: 68vh; }
+  .installation-header h1 { font-size: clamp(38px, 12vw, 68px); }
+  .installation-kicker { margin-top: 35px; }
+  .installation-content { padding: 0 18px; }
+  .installation-overview,
+  .installation-gallery { grid-template-columns: 1fr; }
+  .installation-video { margin: 32px auto 48px; }
+  .installation-statement { margin-top: 56px; }
   .tattoo-flash-gallery { column-count: 2; column-gap: 18px; margin-top: 12px; padding: 0 18px; }
   .tattoo-flash-gallery img { margin-bottom: 28px; }
   .category-grid { grid-template-columns: 1fr; padding: 0 18px; }
